@@ -1,0 +1,35 @@
+// Louis Anton D. Saclot
+// Nov. 11, 2015
+// This program will display any positive number starting from the number given by the user until 1000.
+
+#include<stdio.h>
+
+int thou(int x);
+
+int main () {
+	
+	int num1=0;
+	int x;
+	
+	// Asks input from the user
+	printf("Please Enter any positve number from 1000 downward: ");
+	scanf("%d", &num1);
+	
+	// Process
+	x=num1;
+	x++;
+	
+	num1=thou(x);
+	
+}
+// Function that uses recursion to display the numbers up to 1000. 
+int thou(int x)
+{
+	if(x<=1000)	{
+	
+		printf("%d\n", x);
+		x++;
+	
+		return thou(x);	
+	}
+}
